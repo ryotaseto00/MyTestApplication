@@ -9,7 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.myapplication.databinding.FragmentMessageBinding;
+
 public class MessageFragment extends Fragment {
+
+    private FragmentMessageBinding binding;
+
     @Nullable
     @org.jetbrains.annotations.Nullable
     @Override
@@ -17,6 +22,7 @@ public class MessageFragment extends Fragment {
             @NonNull @org.jetbrains.annotations.NotNull LayoutInflater inflater,
             @Nullable @org.jetbrains.annotations.Nullable ViewGroup container,
             @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_message,container,false);
+        binding = FragmentMessageBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 }

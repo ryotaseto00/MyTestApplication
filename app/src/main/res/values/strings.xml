@@ -3,4 +3,5 @@
     <string name="home">home</string>
     <string name="message">message</string>
     <string name="board">board</string>
+    <string name="sokuden_user_title">即電募集中のユーザー</string>
 </resources>
