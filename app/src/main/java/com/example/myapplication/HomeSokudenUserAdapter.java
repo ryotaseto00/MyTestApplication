@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -15,24 +16,28 @@ import org.jetbrains.annotations.NotNull;
 public class HomeSokudenUserAdapter extends ListAdapter<User, RecyclerView.ViewHolder> {
 
     public HomeSokudenUserAdapter(){
-        super(User.DIFF_CALLBACK)
+        super(new UserDataDiffCallback());
     }
 
     @NonNull
     @NotNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        return null;
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        SokudenUserItemBinding binding = SokudenUserItemBinding.inflate(layoutInflater,parent,false);
+        return new SokudenUserViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull RecyclerView.ViewHolder holder, int position) {
-        holder.bin
+        User user = getItem(position);
+        SokudenUserViewHolder userViewHolder =  (SokudenUserViewHolder) holder;
+        userViewHolder.bind(user);
     }
 
     private static class SokudenUserViewHolder extends RecyclerView.ViewHolder{
 
-        private SokudenUserItemBinding binding;
+        private final SokudenUserItemBinding binding;
 
         public SokudenUserViewHolder(@NonNull @NotNull SokudenUserItemBinding binding) {
             super(binding.getRoot());
@@ -40,8 +45,8 @@ public class HomeSokudenUserAdapter extends ListAdapter<User, RecyclerView.ViewH
 
         }
 
-        public static void bind(User user){
-            this.binding.
+        public void bind(User user){
+            binding.sokudenUserName.setText(user.getUserName());
         }
 
     }

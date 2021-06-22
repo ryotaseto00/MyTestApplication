@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.myapplication.databinding.FragmentHomeBinding;
@@ -26,9 +27,14 @@ public class HomeFragment extends Fragment {
             @Nullable @org.jetbrains.annotations.Nullable ViewGroup container,
             @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
 
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
         binding.callUserList.setLayoutManager(new LinearLayoutManager(getContext(),HORIZONTAL,false));
+        HomeSokudenUserAdapter adapter = new HomeSokudenUserAdapter();
+
+        HomeViewModel model = new ViewModelProvider(this).get(HomeViewModel.class);
+        model.getUsers().observe(getViewLifecycleOwner(), adapter::submitList);
+        binding.callUserList.setAdapter(adapter);
 
         return binding.getRoot();
     }
