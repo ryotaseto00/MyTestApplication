@@ -17,7 +17,10 @@
                 android:id="@+id/waiting_user_photo"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:layout_marginTop="2dp"
                 android:src="@drawable/ic_baseline_person_24"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="1dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
