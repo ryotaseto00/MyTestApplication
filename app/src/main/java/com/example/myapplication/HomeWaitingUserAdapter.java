@@ -8,35 +8,37 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.database.User;
-import com.example.myapplication.databinding.SokudenUserItemBinding;
+import com.example.myapplication.databinding.WaitingUserItemBinding;
 
 import org.jetbrains.annotations.NotNull;
 
-public class HomeSokudenUserAdapter extends ListAdapter<User, RecyclerView.ViewHolder> {
-    public HomeSokudenUserAdapter(){
+public class HomeWaitingUserAdapter extends ListAdapter<User, RecyclerView.ViewHolder> {
+
+    public HomeWaitingUserAdapter(){
         super(new UserDataDiffCallback());
     }
+
     @NonNull
     @NotNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        SokudenUserItemBinding binding = SokudenUserItemBinding.inflate(layoutInflater,parent,false);
-        return new SokudenUserViewHolder(binding);
+        WaitingUserItemBinding binding = WaitingUserItemBinding.inflate(layoutInflater,parent,false);
+        return new WaitingUserViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull RecyclerView.ViewHolder holder, int position) {
         User user = getItem(position);
-        SokudenUserViewHolder userViewHolder =  (SokudenUserViewHolder) holder;
+        WaitingUserViewHolder userViewHolder =  (WaitingUserViewHolder) holder;
         userViewHolder.bind(user);
     }
 
-    private static class SokudenUserViewHolder extends RecyclerView.ViewHolder{
+    private static class WaitingUserViewHolder extends RecyclerView.ViewHolder{
 
-        private final SokudenUserItemBinding binding;
+        private final WaitingUserItemBinding binding;
 
-        public SokudenUserViewHolder(@NonNull @NotNull SokudenUserItemBinding binding) {
+        public WaitingUserViewHolder(@NonNull @NotNull WaitingUserItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
 
@@ -48,4 +50,3 @@ public class HomeSokudenUserAdapter extends ListAdapter<User, RecyclerView.ViewH
 
     }
 }
-

@@ -21,10 +21,13 @@ public class HomeViewModel extends ViewModel {
     }
 
     private void loadUsers(){
-        users.setValue(new ArrayList<User>(Arrays.asList(
-                new User(0L,"はなこ",28),
-                new User(1L,"みちこ",20)
-                )
+        users.setValue(new ArrayList<>(Arrays.asList(
+                new User(0L, "はなこ", 28),
+                new User(1L, "みちこ", 20),
+                new User(2L, "ゆうか",19),
+                new User(3L,"れな",26),
+                new User(4L,"なな",28)
+        )
         ));
     }
 }

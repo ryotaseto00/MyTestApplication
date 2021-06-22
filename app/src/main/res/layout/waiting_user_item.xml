@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="user"
+            type="com.example.myapplication.database.User" />
+    </data>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".MainActivity">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/waiting_user_photo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/waiting_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@{user.userName}"
+                app:layout_constraintTop_toBottomOf="@id/waiting_user_photo"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="山田花子" />
+
+            <TextView
+                android:id="@+id/waiting_user_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="14sp"
+                android:text="@{Integer.toString(user.age) + '歳'}"
+                app:layout_constraintStart_toEndOf="@id/waiting_user_name"
+                app:layout_constraintTop_toBottomOf="@id/waiting_user_photo"
+                tools:text="27歳" />
+
+            <TextView
+                android:id="@+id/waiting_user_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="14sp"
+                android:text="@{user.region}"
+                app:layout_constraintStart_toEndOf="@id/waiting_user_age"
+                app:layout_constraintTop_toBottomOf="@id/waiting_user_photo"
+                tools:text="東京" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
