@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.home;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.database.UserDataDiffCallback;
 import com.example.myapplication.database.User;
 import com.example.myapplication.databinding.SokudenUserItemBinding;
 
@@ -39,7 +40,6 @@ public class HomeSokudenUserAdapter extends ListAdapter<User, RecyclerView.ViewH
         public SokudenUserViewHolder(@NonNull @NotNull SokudenUserItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
-
         }
 
         public void bind(User user){

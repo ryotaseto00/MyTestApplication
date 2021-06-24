@@ -1,18 +1,21 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
+import com.example.myapplication.home.HomeFragment;
+import com.example.myapplication.message.MessageFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import org.jetbrains.annotations.NotNull;
+import dagger.hilt.android.AndroidEntryPoint;
 
+@AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
+
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

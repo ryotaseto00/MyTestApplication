@@ -4,4 +4,95 @@
     <string name="message">message</string>
     <string name="board">board</string>
     <string name="sokuden_user_title">即電募集中のユーザー</string>
+    <string name="self_introduction">自己紹介</string>
+    <string name="self_introduction_sample">
+        はじめまして。いろいろ話せる友達が欲しいと思って始めました。\n\n
+        ゲームしたり、漫画読んだり、ドラマ観たりインドアも好きですが、たまに国内や海外に旅行に行くのも好きです。\n\n
+        気が合う人と話せたらいいな通話はリクエストくださったら、心の準備ができます。\n\n
+        いきなり見せたりするのはご遠慮くださいね。
+    </string>
+    <string name="self_introduction_sample_hana">
+        初めまして、こんにちは〜\n
+        はなと言います。はなちゃんってよんでください〜\n\n
+        わからないことだらけですが、色々教えてください。\n
+        皆さん気軽に話しかけてくださいね。
+    </string>
+    <string name="self_introduction_sample_1">
+        メッセージいつでも待ってます。\n
+        たくさんお話ししたいです\n
+        まずはメールでいろんなお話ししたいです。
+    </string>
+    <string name="message_sample_0">
+        はじめまして！タイプだったので思い切っていいねしてみました！\n
+        ぜひよろしくお願いします^^
+    </string>
+    <string name="message_sample_1">
+        〇〇さんはじめまして！\n\n
+        美味しいもの好きなのが一緒だと思いいいねさせて頂きました！とくにお肉が好きで、休日にはよく新しいお店を開拓しに行きます^^\n\n
+        他にも旅行やカメラなど共通の趣味も多いのでぜひ話してみたいです！\n\n
+        よろしくお願いします。\n\n
+        P.S. 3枚目の猫の写真が可愛すぎます。飼ってる子ですか？\n
+    </string>
+    <string name="message_sample_2">
+        同じ旅行好きで話してみたいと思いいいねさせて頂きました
+    </string>
+    <string name="message_sample_3">
+        率直に笑顔が素敵だと思いいいねさせて頂きました！
+    </string>
+    <string name="message_sample_4">
+        率直に笑顔が素敵だと思いいいねさせて頂きました！そして料理が好きとありましたが2枚目の写真は〇〇さんが作ったんですか？だとしたらすごい\n
+    </string>
+    <string name="message_sample_5">
+        やった！マッチングw\n\n
+        〇〇さんは特に辛いもの好きなんですね！どんな料理が好きなんですか？韓国料理とか？\n\n
+        ちなみにどうしていいね返してくれたんですか^^？\n
+    </string>
+    <string name="message_sample_6">
+        マッチングありがとうございます！\n
+        美味しいもの巡りや、旅行、カメラの趣味など話したら楽しそうと思っていたので嬉しいです！\n\n
+        たかしといいます^^改めてよろしくお願いします。\n\n
+        〇〇さんは特に辛いもの好きなんですね！何料理がとくに好きなんですか？\n
+    </string>
+    <string name="message_sample_7">
+        旅行が好きなんですね！おすすめのところはありますか？
+    </string>
+    <string name="message_sample_8">
+        保育士って大変って聞きます。やっぱりそうなんですか？
+    </string>
+    <string name="message_sample_9">
+        石川出身なんですね！去年金沢に旅行で行きました！いいとこですよね^^
+    </string>
+    <string name="message_sample_10">
+        映画によく行くんですね。話題の△△はもう観ました？
+    </string>
+    <string name="message_sample_11">
+        花見いいですよね。どこ行くかは決まりましたか？
+    </string>
+    <string name="message_sample_12">
+        ワイン好きなんですね！〇〇ってお店知ってます？種類いっぱいあっておすすめです^^
+    </string>
+    <string name="message_sample_13">
+        最近忙しい感じかな？もし時間があれば〇〇の話とかしたいです。
+    </string>
+    <string name="message_sample_14">
+        今日は寒いですね！風邪流行っているので気をつけて下さい。P.S.お時間あるときでいいので返事くれると嬉しいです。1年でも待ってます！
+    </string>
+    <string name="message_sample_15">
+        お久しぶりです。〇〇さん辛いもの好きでしたよね!?恵比寿で美味しいチゲ鍋のお店発見しましたので〇〇姫に報告であります！
+    </string>
+    <string name="message_sample_16">
+        出会いを求める人がこんなにもいるとは思いませんでした。 前向きに頑張れました！
+    </string>
+    <string name="message_sample_17">
+        話し下手や、何書こうか分からないときに、DaiGoによるサポート？（接し方）が見られるので、そこから話を広げていけば良いことと、
+        元がしっかりしているので、安心して利用できるのが非常にユーザー目線で良いです。
+    </string>
+    <string name="message_sample_18">
+        平日はIT企業で営業を担当しています。話すことが好きなので仕事にやりがいを感じていて、これからも頑張っていきたいです。休みは土日で、アウトドア・インドアのどちらでも楽しめるタイプです。
+    </string>
+    <string name="message_sample_19">
+        ぜひこれから宜しくお願い致します！ A子さんのことは何とお呼びすればよろしいですか？
+    </string>
+    <string name="request_key">fromMessageFragmentToMessagesFromUserFragment</string>
+
 </resources>

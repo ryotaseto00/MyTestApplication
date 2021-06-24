@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,11 +15,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.databinding.FragmentHomeBinding;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
 import static androidx.recyclerview.widget.RecyclerView.HORIZONTAL;
 
+@AndroidEntryPoint
 public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
+    private HomeViewModel homeViewModel;
 
     @Nullable
     @org.jetbrains.annotations.Nullable
@@ -38,9 +42,9 @@ public class HomeFragment extends Fragment {
         binding.waitingUserList.setLayoutManager(new GridLayoutManager(getContext(),2, RecyclerView.VERTICAL,false));
         HomeWaitingUserAdapter waitingAdapter = new HomeWaitingUserAdapter();
 
-        HomeViewModel model = new ViewModelProvider(this).get(HomeViewModel.class);
-        model.getUsers().observe(getViewLifecycleOwner(), sokudenAdapter::submitList);
-        model.getUsers().observe(getViewLifecycleOwner(), waitingAdapter::submitList);
+        homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        homeViewModel.getUsers().observe(getViewLifecycleOwner(), sokudenAdapter::submitList);
+        homeViewModel.getUsers().observe(getViewLifecycleOwner(), waitingAdapter::submitList);
         binding.callUserList.setAdapter(sokudenAdapter);
         binding.waitingUserList.setAdapter(waitingAdapter);
 

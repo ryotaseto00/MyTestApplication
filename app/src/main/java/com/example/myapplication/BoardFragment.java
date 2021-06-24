@@ -11,6 +11,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.databinding.FragmentBoardBinding;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class BoardFragment extends Fragment {
 
     private FragmentBoardBinding binding;
